@@ -26,8 +26,8 @@
 # SOLUTION
 class Solution:
   def twoSum(self, nums: List[int], target: int) -> List[int]:
-    hm = {}
+    hm = {}                          # Hash map to store number and its index
     for i in range(len(nums)):
-      if (target-nums[i]) in hm:
-        return [i,hm[target-nums[i]]]
-      hm[nums[i]] = i
+      if (target - nums[i]) in hm:   # Check if the complement exists
+        return [i, hm[target - nums[i]]]  # Return current index and stored index
+      hm[nums[i]] = i                # Store the number with its index

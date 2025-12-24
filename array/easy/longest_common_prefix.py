@@ -21,14 +21,15 @@
 # SOLUTION
 class Solution:
   def longestCommonPrefix(self, strs: List[str]) -> str:
-    com_pref = ""
-    sorted_strs = sorted(strs)
-    first_pref = sorted_strs[0]
-    last_pref = sorted_strs[-1]
+    com_pref = ""                # Stores the current common prefix
+    sorted_strs = sorted(strs)   # Sorts the list of strings
+    first_pref = sorted_strs[0]  # First string after sorting
+    last_pref = sorted_strs[-1]  # Last string after sorting
 
     for i in range(min(len(first_pref), len(last_pref))):
       if first_pref[i] != last_pref[i]:
-        return com_pref
-      else:          com_pref += first_pref[i]
+        return com_pref # Stop when characters differ
 
-    return com_pref
+      com_pref += first_pref[i] # Append matching character
+
+    return com_pref # Return the longest common prefix

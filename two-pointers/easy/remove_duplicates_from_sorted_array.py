@@ -30,5 +30,5 @@ class Solution:
       if nums[j] != nums[i]:
         j += 1                    # Move to the next position for unique element
         nums[j] = nums[i]         # Assign the unique element
-        
+
     return j + 1                  # Return the length of the list with unique elements

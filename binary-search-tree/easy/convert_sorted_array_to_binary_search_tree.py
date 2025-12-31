@@ -32,8 +32,8 @@ class Solution:
     if len(nums) == 0: 
       return
 
-    mid = len(nums) // 2  # Choose the middle element
-    root = TreeNode(nums[mid]) 
+    mid = len(nums) // 2        # Choose the middle element
+    root = TreeNode(nums[mid])  # Create the root node with the middle element
     root.left = self.sortedArrayToBST(nums[:mid])     # Recursively build the left subtree from the left half
     root.right = self.sortedArrayToBST(nums[mid+1:])  # Recursively build the right subtree from the right half
     return root # Return the root

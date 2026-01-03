@@ -25,16 +25,16 @@
 # SOLUTION
 class Solution:
   def containsDuplicate(self, nums: List[int]) -> bool:
-    candidate = set()  # store numbers that have already appeared
+    candidate = set()  # Store numbers that have already appeared
     
     for num in nums:
-      # if the number is already in the set, we found a duplicate. Return True
+      # If the number is already in the set, we found a duplicate. Return True
       if num in candidate:
         return True
       
-      # mark this number as seen
+      # Mark this number as seen
       candidate.add(num)
     
-    # no duplicate found after checking all elements, return False
+    # No duplicate found after checking all elements, return False
     return False
 
